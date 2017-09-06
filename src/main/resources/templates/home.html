@@ -33,8 +33,11 @@
 <hr>
 <ol>
     {{#games}}
-        <li>
-            {{name}} {{genre}} {{platform}} {{releaseYear}}
+        <li inline>
+            <form action="/remove-game?id={{id}}" method="post">
+                {{name}} {{genre}} {{platform}} {{releaseYear}}
+            <button type="submit">Remove</button>
+            </form>
         </li>
     {{/games}}
 </ol>
